@@ -22,6 +22,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-jest": "^21.2.0",
+    "babel-plugin-transform-string-literal-replace": "^1.0.2",
     "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
     "eslint": "^4.1.0",
