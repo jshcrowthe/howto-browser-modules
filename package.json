@@ -1,8 +1,7 @@
 {
-  "name": "howto-browser-modules",
+  "name": "@howto/browser-modules",
   "version": "0.0.0",
   "description": "A sample repo demonstrating package.json config for a browser module published to NPM",
-  "homepage": "",
   "author": {
     "name": "Josh Crowther",
     "email": "jshcrowthe@gmail.com",
@@ -12,6 +11,8 @@
     "lib"
   ],
   "main": "lib/index.js",
+  "module": "",
+  "browser": {},
   "keywords": [
     "howto",
     "modules",
