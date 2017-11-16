@@ -1,4 +1,4 @@
-# @howto/browser-modules [![npm-image]][npm-url]] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# @howto/browser-modules [![NPM Module][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > A sample repo demonstrating package.json config for a browser module published to NPM
 
 ## Explainer 
