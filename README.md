@@ -26,6 +26,20 @@ Webpack and Rollup both support this field OOTB which helps lower the barrier to
 
 _\*: ESM (EcmaScript Modules), CJS (CommonJS Modules)_
 
+#### `pkg.browser`
+
+Many bundlers also support a `pkg.browser`. However, this field is only really useful if you are shipping isomorphic libraries (i.e. libraries that load both in the browser and on the server). If you are only shipping a browser module, this field can be safely omitted.
+
+Bundlers will react to the absence of this field in different ways:
+
+- **Rollup**: Didn't care in the first place, `pkg.browser` is not something they support OOTB.
+- **Webpack**: Falls back the `pkg.module` followed by the `pkg.main`.
+- **Browserify**: Falls back to the `pkg.main`.
+
+### tl;dr
+
+Ship both an ESM build and a CJS build to your users. Do this by specifying the `pkg.module` field for your ESM entrypoint, and the `pkg.main` field for your CJS entrypoint.
+
 ## Installation
 
 ```sh
