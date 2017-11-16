@@ -1,5 +1,5 @@
 const assert = require('assert');
-const howtoBrowserModules = require('../index.js');
+const howtoBrowserModules = require('../lib/index.js');
 
 describe('howtoBrowserModules', () => {
   it('has a test', () => {
