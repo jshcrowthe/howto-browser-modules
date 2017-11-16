@@ -10,9 +10,8 @@
   "files": [
     "lib"
   ],
-  "main": "lib/index.js",
-  "module": "",
-  "browser": {},
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "keywords": [
     "howto",
     "modules",
@@ -20,22 +19,36 @@
     "package.json"
   ],
   "devDependencies": {
-    "nsp": "^2.6.3",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
     "eslint": "^4.1.0",
-    "prettier": "^1.7.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^4.2.1",
     "eslint-config-prettier": "^2.4.0",
-    "eslint-plugin-prettier": "^2.2.0",
     "eslint-config-xo": "^0.18.2",
+    "eslint-plugin-prettier": "^2.2.0",
+    "husky": "^0.14.3",
     "jest": "^21.0.0",
-    "jest-cli": "^21.0.0"
+    "jest-cli": "^21.0.0",
+    "lint-staged": "^4.2.1",
+    "mkdirp": "^0.5.1",
+    "npm-run-all": "^4.1.2",
+    "nsp": "^2.6.3",
+    "prettier": "^1.7.0"
   },
   "scripts": {
-    "prepublish": "nsp check",
-    "pretest": "eslint .",
+    "prebuild:esm": "mkdirp dist/esm",
+    "build:esm": "BABEL_ENV=esm babel src/index.js -o dist/esm/index.js",
+    "prebuild:cjs": "mkdirp dist/cjs",
+    "build:cjs": "babel src/index.js -o dist/cjs/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepublish": "run-p verify:security",
+    "pretest": "run-p lint",
     "precommit": "lint-staged",
-    "test": "jest"
+    "test": "jest",
+    "verify:security": "nsp check"
   },
   "lint-staged": {
     "*.js": [
@@ -47,31 +60,6 @@
       "git add"
     ]
   },
-  "eslintConfig": {
-    "extends": [
-      "xo",
-      "prettier"
-    ],
-    "env": {
-      "jest": true,
-      "node": true
-    },
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "printWidth": 90
-        }
-      ]
-    },
-    "plugins": [
-      "prettier"
-    ]
-  },
   "repository": "jshcrowthe/howto-browser-modules",
-  "jest": {
-    "testEnvironment": "node"
-  },
   "license": "MIT"
 }
