@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Josh Crowther",
+      "authorEmail": "jshcrowthe@gmail.com",
+      "authorUrl": "https://jcrowther.io"
+    }
+  }
+}
