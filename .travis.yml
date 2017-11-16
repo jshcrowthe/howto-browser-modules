@@ -1,5 +1,5 @@
 language: node_js
+# We don't need to test across a variety of node versions as we are
+# emulating a browser env
 node_js:
-  - 7
-  - 6
-  - 4
+  - 8
