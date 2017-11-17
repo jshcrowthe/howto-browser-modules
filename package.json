@@ -1,6 +1,6 @@
 {
   "name": "@howto/browser-modules",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A sample repo demonstrating package.json config for a browser module published to NPM",
   "author": {
     "name": "Josh Crowther",
@@ -8,8 +8,7 @@
     "url": "https://jcrowther.io"
   },
   "files": [
-    "dist",
-    "README.md"
+    "dist"
   ],
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -40,13 +39,14 @@
     "prettier": "^1.7.0"
   },
   "scripts": {
+    "build":"run-p build:esm build:cjs",
     "prebuild:esm": "mkdirp dist/esm",
     "build:esm": "BABEL_ENV=esm babel src/index.js -o dist/esm/index.js",
     "prebuild:cjs": "mkdirp dist/cjs",
     "build:cjs": "babel src/index.js -o dist/cjs/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepublish": "run-p verify:security",
+    "prepublish": "run-p verify:security build",
     "pretest": "run-p lint",
     "precommit": "lint-staged",
     "test": "jest",
