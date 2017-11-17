@@ -1,6 +1,6 @@
 {
   "name": "@howto/browser-modules",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A sample repo demonstrating package.json config for a browser module published to NPM",
   "author": {
     "name": "Josh Crowther",
@@ -8,7 +8,8 @@
     "url": "https://jcrowther.io"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
