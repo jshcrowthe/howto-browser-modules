@@ -78,7 +78,7 @@ sum(1,2,3,4,5)
 
 MIT © [Josh Crowther](https://jcrowther.io)
 
-[npm-image]: https://badge.fury.io/js/@howto/browser-modules.svg
+[npm-image]: https://badge.fury.io/js/%40howto%2Fbrowser-modules.svg
 [npm-url]: https://npmjs.org/package/@howto/browser-modules
 [travis-image]: https://travis-ci.org/jshcrowthe/howto-browser-modules.svg?branch=master
 [travis-url]: https://travis-ci.org/jshcrowthe/howto-browser-modules
