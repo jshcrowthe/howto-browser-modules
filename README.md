@@ -20,6 +20,8 @@ The main things to call to attention here are in the `package.json`, specificall
 - `pkg.main`
 - `pkg.module`
 
+_NOTE: You can see examples of the [`pkg.main`](https://github.com/jshcrowthe/howto-browser-modules/blob/master/package.json#L13) and the [`pkg.module`](https://github.com/jshcrowthe/howto-browser-modules/blob/master/package.json#L14) in this repos `package.json`_
+
 #### `pkg.main`
 
 This is the standard CJS entrypoint to your module as [defined by NPM](https://docs.npmjs.com/files/package.json#main). Bundlers like browserify, rollup and webpack all use this field as the entrypoint when no other entry points are defined.
