@@ -26,14 +26,6 @@
             }
           }
         ]
-      ],
-      "plugins": [
-        [
-          "transform-string-literal-replace",
-          {
-            "<MODULE_VERSION>": "CJS"
-          }
-        ]
       ]
     },
     "esm": {
@@ -47,14 +39,6 @@
               ]
             },
             "modules": false
-          }
-        ]
-      ],
-      "plugins": [
-        [
-          "transform-string-literal-replace",
-          {
-            "<MODULE_VERSION>": "ESM"
           }
         ]
       ]

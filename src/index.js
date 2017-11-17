@@ -1,5 +1,3 @@
-console.log('Loaded using <MODULE_VERSION> build');
-
 /**
  * Returns the sum of an unbounded array of integers
  */

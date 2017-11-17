@@ -22,7 +22,6 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-jest": "^21.2.0",
-    "babel-plugin-transform-string-literal-replace": "^1.0.2",
     "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
     "eslint": "^4.1.0",
@@ -39,7 +38,7 @@
     "prettier": "^1.7.0"
   },
   "scripts": {
-    "build":"run-p build:esm build:cjs",
+    "build": "run-p build:esm build:cjs",
     "prebuild:esm": "mkdirp dist/esm",
     "build:esm": "BABEL_ENV=esm babel src/index.js -o dist/esm/index.js",
     "prebuild:cjs": "mkdirp dist/cjs",
