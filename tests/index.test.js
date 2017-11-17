@@ -5,7 +5,7 @@ describe('sum', () => {
   it('3 + 5 = 8', () => {
     expect(sum(3, 5)).equal(8);
   });
-  it('3 + 5 + 4 = 8', () => {
+  it('3 + 5 + 4 = 12', () => {
     expect(sum(3, 5, 4)).equal(12);
   });
   it('Should handle incorrect inputs', () => {
