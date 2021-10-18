@@ -35,7 +35,7 @@
     "mkdirp": "0.5.1",
     "npm-run-all": "4.1.2",
     "nsp": "2.8.1",
-    "prettier": "1.8.2"
+    "prettier": "2.4.1"
   },
   "scripts": {
     "build": "run-p build:esm build:cjs",
