@@ -1,67 +1,35 @@
 {
   "name": "@howto/browser-modules",
   "version": "0.0.3",
-  "description": "A sample repo demonstrating package.json config for a browser module published to NPM",
+  "description":
+    "A sample repo demonstrating package.json config for a browser module published to NPM",
   "author": {
     "name": "Josh Crowther",
     "email": "jshcrowthe@gmail.com",
     "url": "https://jcrowther.io"
   },
-  "files": [
-    "dist"
-  ],
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "keywords": [
-    "howto",
-    "modules",
-    "browser",
-    "package.json"
-  ],
+  "files": ["dist"],
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "keywords": ["howto", "modules", "browser", "package.json"],
   "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-core": "6.26.0",
-    "babel-jest": "22.4.1",
-    "babel-preset-env": "1.6.1",
-    "chai": "4.1.2",
-    "eslint": "4.18.1",
-    "eslint-config-prettier": "2.7.0",
-    "eslint-config-xo": "0.18.2",
-    "eslint-plugin-prettier": "2.3.1",
-    "husky": "0.14.3",
+    "husky": "^7.0.4",
     "jest": "22.4.1",
-    "jest-cli": "22.4.1",
-    "lint-staged": "4.3.0",
-    "mkdirp": "0.5.1",
-    "npm-run-all": "4.1.2",
-    "nsp": "2.8.1",
+    "lint-staged": "^12.0.2",
     "prettier": "1.8.2",
     "rollup": "^2.60.0",
     "typescript": "^4.4.4"
   },
   "scripts": {
+    "install": "husky install",
+    "lint": "lint-staged",
     "build": "run-p build:esm build:cjs",
-    "prebuild:esm": "mkdirp dist/esm",
-    "build:esm": "BABEL_ENV=esm babel src/index.js -o dist/esm/index.js",
-    "prebuild:cjs": "mkdirp dist/cjs",
-    "build:cjs": "babel src/index.js -o dist/cjs/index.js",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "prepublish": "run-p verify:security build",
-    "pretest": "run-p lint",
-    "precommit": "lint-staged",
-    "test": "jest",
-    "verify:security": "nsp check"
+    "prettier": "yarn prettier --write",
+    "test": "jest"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.js": ["eslint --fix", "git add"],
+    "*.json": ["prettier --write", "git add"]
   },
   "repository": "jshcrowthe/howto-browser-modules",
   "license": "MIT",
