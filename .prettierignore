@@ -1,2 +1,4 @@
 # Ignore Dist Directory
 dist/
+.yarn/
+.pnp.*

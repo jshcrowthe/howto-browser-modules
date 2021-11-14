@@ -24,12 +24,8 @@
     "install": "husky install",
     "lint": "lint-staged",
     "build": "run-p build:esm build:cjs",
-    "prettier": "yarn prettier --write",
+    "prettier": "prettier --write",
     "test": "jest"
-  },
-  "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
-    "*.json": ["prettier --write", "git add"]
   },
   "repository": "jshcrowthe/howto-browser-modules",
   "license": "MIT",
