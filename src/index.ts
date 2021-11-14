@@ -1,10 +1,10 @@
 /**
  * Returns the sum of an unbounded array of integers
  */
-export function sum(...numbers) {
-  const parsed = numbers.map(num => parseInt(num, 10));
+export function sum(...numbers: any[]): number {
+  const parsed = numbers.map((num) => parseInt(num, 10));
 
-  if (parsed.some(num => isNaN(num))) {
+  if (parsed.some((num) => isNaN(num))) {
     throw new Error("Invalid numbers passed to `sum`");
   }
 
@@ -14,7 +14,7 @@ export function sum(...numbers) {
 /**
  * Returns the difference of 2 integers
  */
-export function difference(...numbers) {
+export function difference(...numbers: any[]): number {
   if (numbers.length !== 2) {
     throw new Error("Incorrect number of parameters passed to `difference`");
   }
