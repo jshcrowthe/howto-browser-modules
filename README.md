@@ -1,7 +1,8 @@
 # @howto/browser-modules [![NPM Module][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+
 > A sample repo demonstrating package.json config for a browser module published to NPM
 
-## Explainer 
+## Explainer
 
 This is an example repo illustrating some concepts of creating **browser specific** NPM modules. While many (admittedly most) modules published to NPM are for Node environments, this repo is designed to illustrate how to create NPM modules only targeting web environments.
 
@@ -15,7 +16,7 @@ If you are not shipping isomorphic code, avoid defining a `pkg.browser`.
 
 ### Key points
 
-The main things to call to attention here are in the `package.json`, specifically: 
+The main things to call to attention here are in the `package.json`, specifically:
 
 - `pkg.main`
 - `pkg.module`
@@ -30,7 +31,7 @@ This is the standard CJS entrypoint to your module as [defined by NPM](https://d
 
 #### `pkg.module`
 
-The [Rollup wiki](https://github.com/rollup/rollup/wiki/pkg.module) gives a really nice explainer of the rationale behind this field. As the module landscape moves from CJS => ESM\* using ESM where possible will result in more performant apps across the board. 
+The [Rollup wiki](https://github.com/rollup/rollup/wiki/pkg.module) gives a really nice explainer of the rationale behind this field. As the module landscape moves from CJS => ESM\* using ESM where possible will result in more performant apps across the board.
 
 Webpack and Rollup both support this field OOTB which helps lower the barrier to writing a performant app.
 
@@ -61,17 +62,17 @@ $ npm install --save @howto/browser-modules
 ### ESM
 
 ```js
-import { sum } from '@howto/browser-modules';
+import { sum } from "@howto/browser-modules";
 
-sum(1,2,3,4,5)
+sum(1, 2, 3, 4, 5);
 ```
 
 ### CJS
 
 ```js
-const { sum } = require('@howto/browser-modules');
+const { sum } = require("@howto/browser-modules");
 
-sum(1,2,3,4,5)
+sum(1, 2, 3, 4, 5);
 ```
 
 ## License
