@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { sum, difference } from '../src/index';
+import { sum, difference } from '../src/.';
 
 describe('sum', () => {
   it('3 + 5 = 8', () => {
