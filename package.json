@@ -1,6 +1,6 @@
 {
   "name": "@howto/browser-modules",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A sample repo demonstrating package.json config for a browser module published to NPM",
   "author": {
     "name": "Josh Crowther",
@@ -43,7 +43,8 @@
     "lint": "lint-staged",
     "build": "rollup -c",
     "prettier": "prettier --write",
-    "test": "jest"
+    "test": "jest",
+    "prepack": "yarn build"
   },
   "repository": "jshcrowthe/howto-browser-modules",
   "license": "MIT",
