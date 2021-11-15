@@ -1,6 +1,6 @@
 {
   "name": "@howto/browser-modules",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A sample repo demonstrating package.json config for a browser module published to NPM",
   "author": {
     "name": "Josh Crowther",
