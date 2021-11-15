@@ -1,4 +1,4 @@
-# @howto/browser-modules [![NPM Module][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# @howto/browser-modules [![Build and Test](https://github.com/jshcrowthe/howto-browser-modules/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/jshcrowthe/howto-browser-modules/actions/workflows/build-and-test.yml)[![NPM Release](https://github.com/jshcrowthe/howto-browser-modules/actions/workflows/publish.yaml/badge.svg)](https://github.com/jshcrowthe/howto-browser-modules/actions/workflows/publish.yaml)
 
 > A sample repo demonstrating package.json config for a browser module published to NPM
 
